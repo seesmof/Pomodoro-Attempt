@@ -40,15 +40,31 @@ aside {
 }
 .logo {
   padding: 2rem;
-  background: #956c6c;
+  /* background: #956c6c; */
   text-align: center;
   font-size: 2rem;
 }
 .logo a {
   transition: all 0.3s ease-in-out;
+  font-weight: 600;
 }
 .logo a:hover {
-  opacity: 0.7;
+  color: #2196f3;
+}
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.menu-link {
+  padding: 1rem;
+  margin-left: 1rem;
+  transition: all 0.2s ease-in-out;
+  /* background: #5b88a8; */
+}
+.menu-link:hover {
+  transform: translateX(5px);
 }
 
 .main-section {
