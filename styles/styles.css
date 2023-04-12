@@ -36,6 +36,9 @@ body {
 aside {
   flex: 0 0 25%;
   width: 25%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   /* background: #a8c6bd; */
 }
 .logo {
@@ -63,7 +66,6 @@ aside {
   margin-left: 1rem;
   transition: all 0.2s ease-in-out;
   /* background: #5b88a8; */
-  border-left: 2px solid #000;
 }
 .menu-link:hover {
   transform: translateX(6px);
@@ -71,6 +73,11 @@ aside {
 }
 .active {
   transform: translateX(6px);
+}
+.bottom-part {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 .main-section {
