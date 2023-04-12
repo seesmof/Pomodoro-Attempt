@@ -103,11 +103,6 @@ aside i {
 main {
   flex: 1;
 }
-footer {
-  background: #eee;
-  height: 10%;
-  width: 100%;
-}
 
 .main-container {
   display: flex;
@@ -137,4 +132,25 @@ footer {
 #toggle:hover {
   cursor: pointer;
   background: #eee;
+}
+
+footer {
+  background: #eee;
+  height: 10%;
+  width: 100%;
+}
+.author {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 1.2rem;
+}
+.author a {
+  transition: all 0.2s ease-in-out;
+  color: inherit;
+}
+.author a:hover {
+  opacity: 0.7;
 }
