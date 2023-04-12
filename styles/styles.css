@@ -83,10 +83,12 @@ aside {
   height: 1.1px;
   background: #212121;
 }
-.donate {
+.donate,
+.bottom-part a {
   transition: all 0.2s ease-in-out;
 }
-.donate:hover {
+.donate:hover,
+.bottom-part a:hover {
   opacity: 0.7;
 }
 aside i {
