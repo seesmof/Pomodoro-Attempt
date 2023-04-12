@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 
+Light Theme:
+Background: #F5F5F5 (light gray)
+Primary Color: #F44336 (red)
+Secondary Color: #2196F3 (blue)
+Accent Color: #FFC107 (yellow)
+Text Color: #212121 (dark gray)
+
+Dark Theme:
+Background: #212121 (dark gray)
+Primary Color: #FF5722 (orange)
+Secondary Color: #03A9F4 (light blue)
+Accent Color: #8BC34A (green)
+Text Color: #F5F5F5 (light gray) */
+
+body {
+  background-color: #f5f5f5;
+  color: #212121;
+}
+.page-container {
+  display: flex;
+  height: 100vh;
+}
+
+aside {
+  flex: 0 0 25%;
+  width: 25%;
+  background: #4aa98c;
+}
+.logo {
+  aspect-ratio: 1/1;
+}
+
+.main-section {
+  flex: 1;
+  background: #a44e4e;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+footer {
+  background: #85418d;
+  height: 10%;
+  width: 100%;
+}
