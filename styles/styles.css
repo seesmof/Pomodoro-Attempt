@@ -108,3 +108,33 @@ footer {
   height: 10%;
   width: 100%;
 }
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#stopwatch {
+  font-size: 5rem;
+  padding: 2rem;
+}
+#toggle {
+  background: inherit;
+  border: 1.4px solid #212121;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+#toggle:hover {
+  cursor: pointer;
+  background: #eee;
+}

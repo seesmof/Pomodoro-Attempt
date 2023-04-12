@@ -42,9 +42,58 @@
       </aside>
 
       <section class="main-section">
-        <main></main>
+        <main>
+          <div class="main-container">
+            <div class="timer-container">
+              <div id="stopwatch">00:00</div>
+              <button id="toggle">Start</button>
+            </div>
+          </div>
+        </main>
         <footer></footer>
       </section>
     </div>
+
+    <script>
+      var stopwatchEl = document.getElementById("stopwatch");
+      var toggleBtn = document.getElementById("toggle");
+      var startTime, intervalId;
+
+      function startStopwatch() {
+        startTime = Date.now();
+        intervalId = setInterval(updateStopwatch, 1000 / 60);
+        toggleBtn.textContent = "Stop";
+      }
+
+      function stopStopwatch() {
+        clearInterval(intervalId);
+        toggleBtn.textContent = "Start";
+      }
+
+      function updateStopwatch() {
+        var elapsedTime = Date.now() - startTime;
+        var formattedTime = formatTime(elapsedTime);
+        stopwatchEl.textContent = formattedTime;
+      }
+
+      function formatTime(time) {
+        var minutes = Math.floor(time / 60000);
+        var seconds = Math.floor((time - minutes * 60000) / 1000);
+        return padNumber(minutes) + ":" + padNumber(seconds);
+      }
+
+      function padNumber(num) {
+        return num.toString().padStart(2, "0");
+      }
+
+      toggleBtn.addEventListener("click", function () {
+        if (intervalId) {
+          stopStopwatch();
+          intervalId = null;
+        } else {
+          startStopwatch();
+        }
+      });
+    </script>
   </body>
 </html>
