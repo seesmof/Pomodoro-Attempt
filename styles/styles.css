@@ -43,6 +43,7 @@ aside {
   /* background: #956c6c; */
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 2rem;
 }
 .logo a {
   transition: all 0.3s ease-in-out;
@@ -64,7 +65,7 @@ aside {
   /* background: #5b88a8; */
 }
 .menu-link:hover {
-  transform: translateX(5px);
+  transform: translateX(6px);
 }
 
 .main-section {
