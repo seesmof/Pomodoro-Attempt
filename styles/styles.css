@@ -42,11 +42,11 @@ aside {
   padding: 2rem;
   /* background: #956c6c; */
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-bottom: 2rem;
 }
 .logo a {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
   font-weight: 600;
 }
 .logo a:hover {
@@ -66,6 +66,7 @@ aside {
 }
 .menu-link:hover {
   transform: translateX(6px);
+  color: #2196f3;
 }
 
 .main-section {
