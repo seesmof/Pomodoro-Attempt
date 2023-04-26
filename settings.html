@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/ecffe341ff.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>WorkWave</title>
+
+    <!-- name: WorkWave -->
+    <!-- slogan: Catch the Wave of Focus with WorkWave -->
+  </head>
+  <body>
+    <div class="page-container">
+      <aside>
+        <section class="logo">
+          <a href="/index.html">WorkWave</a>
+        </section>
+        <section class="menu-items">
+          <a href="#" class="menu-link"
+            ><i class="fas fa-clock fa-lg"></i>Pomodoro</a
+          >
+          <a href="#" class="menu-link active"
+            ><i class="fas fa-water fa-lg"></i>Flomodoro</a
+          >
+          <a href="#" class="menu-link"
+            ><i class="fas fa-gear fa-lg"></i>Settings</a
+          >
+        </section>
+        <section class="bottom-part">
+          <div class="separator"></div>
+          <a href="#"><i class="fas fa-sun fa-lg"></i>Change Theme</a>
+          <div class="donate">
+            <i class="fas fa-heart fa-lg"></i
+            ><a href="https://savelife.in.ua/donate/">Support Ukraine</a>
+          </div>
+        </section>
+      </aside>
+
+      <section class="main-section">
+        <main>
+          <div class="main-container">
+            <div class="timer-container">
+              <div id="stopwatch">00:00</div>
+              <button id="toggle">Start</button>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <div class="author">
+            Made by <a href="https://github.com/seesmof">seesmof</a>
+          </div>
+        </footer>
+      </section>
+    </div>
+
+    <script>
+      var stopwatchEl = document.getElementById("stopwatch");
+      var toggleBtn = document.getElementById("toggle");
+      var startTime, intervalId;
+
+      function startStopwatch() {
+        startTime = Date.now();
+        intervalId = setInterval(updateStopwatch, 1000 / 60);
+        toggleBtn.textContent = "Stop";
+      }
+
+      function stopStopwatch() {
+        clearInterval(intervalId);
+        toggleBtn.textContent = "Start";
+      }
+
+      function updateStopwatch() {
+        var elapsedTime = Date.now() - startTime;
+        var formattedTime = formatTime(elapsedTime);
+        stopwatchEl.textContent = formattedTime;
+      }
+
+      function formatTime(time) {
+        var minutes = Math.floor(time / 60000);
+        var seconds = Math.floor((time - minutes * 60000) / 1000);
+        return padNumber(minutes) + ":" + padNumber(seconds);
+      }
+
+      function padNumber(num) {
+        return num.toString().padStart(2, "0");
+      }
+
+      toggleBtn.addEventListener("click", function () {
+        if (intervalId) {
+          stopStopwatch();
+          intervalId = null;
+        } else {
+          startStopwatch();
+        }
+      });
+    </script>
+  </body>
+</html>
