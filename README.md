@@ -4,3 +4,5 @@
 GOD bless you guys, i dont know what this is, something unfinished, but its [public domain](./LICENSE) for the GLORY of JESUS CHRIST our HOLY LORD GOD ALMIGHTY ✝️💗 
 
 Hallelujah thank YOU so much Daddy Jesus Christ our HOly Lord GDO Almighty ✝️💌🤲🏼 
+
+> The image might be taken from internet, may be copyrighted.
